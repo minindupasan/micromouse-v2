@@ -1,4 +1,4 @@
-24417851132038640
+24419585419238727
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -54984,6 +54984,13 @@ Crystal_ABLS2-8.000MHZ-D4Y-T
 0
 2
 2
+Custom
+SW_SS12D07VG4
+
+
+0
+5
+5
 Custom
 XTAL_ABS07-32.768KHZ-T
 
