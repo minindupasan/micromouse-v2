@@ -1,4 +1,4 @@
-# Maze-Solving Car PCB
+# Micromouse V2
 
 ![PCB View](images/pcb.png)
 ![PCB 3D Top View](images/3d-1.png)
