@@ -1,6 +1,8 @@
 # Maze-Solving Car PCB
 
-![Maze-Solving Car](images/car_image.jpg) <!-- Add an image of your car if available -->
+![PCB View](images/pcb.png)
+![PCB 3D Top View](images/3d-1.png)
+![PCB 3D Angled View](images/3d-2.png)
 
 This repository contains the design files, firmware, and documentation for a maze-solving car built using the STM32F103C8T6 microcontroller. The car is equipped with sensors, motors, and communication interfaces to autonomously navigate and solve mazes.
 
@@ -31,8 +33,6 @@ The maze-solving car is an autonomous robot designed to navigate through a maze 
 
 ## Hardware Components
 
-The following components are used in the maze-solving car:
-
 ### Microcontroller
 - **STM32F103C8T6**: ARM Cortex-M3 based microcontroller for control and decision-making.
 
@@ -62,8 +62,8 @@ The following components are used in the maze-solving car:
   - **HSE**: 8 MHz (ABLS2-8.000MHZ-D4Y-T).
   - **LSE**: 32.768 kHz (ABS07-32.768KHZ-T).
 
-### PCB Design
-- **SMD Components**: 0805 package size used for resistors, capacitors, and other components.
+> [!NOTE]
+> The PCB design is optimized for 0805 SMD components, ensuring a compact and efficient layout.
 
 ---
 
@@ -80,6 +80,9 @@ The PCB design files are available in the `hardware/` directory. The design incl
 - Debugging interfaces (UART, SWD, OLED display).
 - USB Type-C for easy connectivity.
 
+> [!TIP]
+> Use the provided Gerber files for manufacturing the PCB. Ensure the manufacturer supports 2-layer boards with 1.6mm thickness.
+
 ---
 
 ## Firmware
@@ -95,6 +98,12 @@ The firmware for the maze-solving car is written in C using the STM32 HAL librar
 - STM32CubeMX for peripheral configuration.
 - STM32 HAL library for hardware abstraction.
 
+> [!IMPORTANT]
+> Ensure the correct version of the STM32 HAL library is used to avoid compatibility issues.
+
+> [!WARNING]
+> Do not modify the STM32CubeMX configuration files manually. Always regenerate them using STM32CubeMX after making changes.
+
 ---
 
 ## Communication Interfaces
@@ -103,6 +112,12 @@ The car supports multiple communication interfaces for debugging and control:
 1. **USB Type-C**: Used for firmware updates and communication with a PC.
 2. **UART**: Serial communication for debugging and data logging.
 3. **SWD**: For flashing firmware and debugging using STLink.
+
+> [!TIP]
+> Use a USB-to-UART converter for easy debugging via UART.
+
+> [!CAUTION]
+> Ensure the baud rate for UART communication matches between the car and the debugging tool.
 
 ---
 
@@ -127,28 +142,30 @@ The car supports multiple communication interfaces for debugging and control:
 4. **Maze Navigation**:
    - Place the car in a maze and use the push buttons to start the navigation algorithm.
 
+> [!WARNING]
+> Double-check the polarity of the power supply connection to prevent damage to the PCB.
+
 ---
 
 ## Repository Structure
+```
 maze-solving-car-pcb/
-├── firmware/ # STM32 firmware source code
-│ ├── Inc/ # Header files
-│ ├── Src/ # Source files
-│ └── STM32CubeMX/ # CubeMX configuration files
-├── hardware/ # PCB design files
-│ ├── schematics/ # Schematic diagrams
-│ ├── layout/ # PCB layout files
-│ └── gerber/ # Gerber files for manufacturing
-├── images/ # Images and diagrams
-├── docs/ # Documentation and datasheets
-└── README.md # This file
-
-Copy
+├── firmware/                  # STM32 firmware source code
+│   ├── Inc/                   # Header files
+│   ├── Src/                   # Source files
+│   └── STM32CubeMX/           # CubeMX configuration files
+├── hardware/                  # PCB design files
+│   ├── schematics/            # Schematic diagrams
+│   ├── layout/                # PCB layout files
+│   └── gerber/                # Gerber files for manufacturing
+├── images/                    # Images and diagrams
+├── docs/                      # Documentation and datasheets
+└── README.md                  # This file
+```
 
 ---
 
 ## License
-
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
@@ -157,6 +174,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - STMicroelectronics for the STM32 HAL library.
 - Contributors to open-source hardware and software tools.
 
----
-
 For questions or contributions, please open an issue or submit a pull request.
+
