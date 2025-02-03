@@ -482,9 +482,9 @@
       "plot": "../../../Micromouse-V2/Gerber/",
       "pos_files": "../../../Micromouse-V2/POS/",
       "specctra_dsn": "",
-      "step": "",
+      "step": "micromouse V2.step",
       "svg": "",
-      "vrml": "3d model/micromouse V2.wrl"
+      "vrml": "../../../micromouse 3d model/micromouse V2.wrl"
     },
     "page_layout_descr_file": ""
   },
@@ -677,7 +677,7 @@
       "group_symbols": true,
       "name": "",
       "sort_asc": true,
-      "sort_field": "Description"
+      "sort_field": "Reference"
     },
     "connection_grid_size": 50.0,
     "drawing": {
